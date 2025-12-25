@@ -344,12 +344,9 @@ def health():
 
 if __name__ == '__main__':
     print("\n" + "="*50)
-    print("🚀 Starting Bayesian ViT Backend Server")
+    print("Starting Bayesian ViT Backend Server")
     print("="*50)
     print(f"Device: {DEVICE}")
     print("="*50 + "\n")
-    
-    # Run on 0.0.0.0 to match the user's manual change in App.jsx (likely running in a container or binding to all interfaces)
-    # However, for local dev normally localhost is fine. User changed App.jsx to use specific IP.
-    # We will bind to 0.0.0.0 to be safe.
     app.run(host='0.0.0.0', port=5500, debug=False)
+
